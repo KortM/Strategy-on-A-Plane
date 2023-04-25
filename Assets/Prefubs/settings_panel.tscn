@@ -1,0 +1,212 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Assets/Styles/ButtonFocus.tres" type="StyleBox" id=2]
+[ext_resource path="res://Assets/Fonts/Donpoligrafbum-Bold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Styles/ButtonHoverStyle.tres" type="StyleBox" id=4]
+[ext_resource path="res://Assets/Styles/ButtonNormal.tres" type="StyleBox" id=5]
+[ext_resource path="res://Assets/Styles/ButtonPressed.tres" type="StyleBox" id=6]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0588235, 0.0509804, 0.0509804, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.541176, 0.584314, 0.619608, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+extra_spacing_top = 17
+extra_spacing_bottom = 17
+extra_spacing_char = 8
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.541176, 0.584314, 0.619608, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=6]
+size = 22
+extra_spacing_char = 1
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 22
+font_data = ExtResource( 3 )
+
+[node name="subpanel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Panel" type="Panel" parent="NinePatchRect/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -416.0
+margin_top = -40.0
+margin_right = 416.0
+margin_bottom = 40.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Label" type="Label" parent="NinePatchRect/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -192.5
+margin_top = -16.0
+margin_right = 192.5
+margin_bottom = 20.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+custom_fonts/font = SubResource( 1 )
+text = "Настройки"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/Panel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 64.0
+margin_top = -288.0
+margin_right = 366.0
+margin_bottom = 288.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 29
+alignment = 1
+
+[node name="graphics_button" type="Button" parent="NinePatchRect/Panel/VBoxContainer"]
+margin_top = 179.0
+margin_right = 302.0
+margin_bottom = 232.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+text = "Графика"
+
+[node name="audio_button" type="Button" parent="NinePatchRect/Panel/VBoxContainer"]
+margin_top = 261.0
+margin_right = 302.0
+margin_bottom = 314.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+text = "Звук"
+
+[node name="control_button" type="Button" parent="NinePatchRect/Panel/VBoxContainer"]
+margin_top = 343.0
+margin_right = 302.0
+margin_bottom = 396.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+text = "Управление"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="NinePatchRect/Panel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -700.0
+margin_top = -136.0
+margin_bottom = 282.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/Panel/VBoxContainer2"]
+margin_right = 700.0
+margin_bottom = 18.0
+
+[node name="screenSize_label" type="Label" parent="NinePatchRect/Panel/VBoxContainer2/HBoxContainer"]
+margin_right = 210.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 4 )
+text = "Разрешение"
+
+[node name="VScrollBar" type="VScrollBar" parent="NinePatchRect/Panel/VBoxContainer2"]
+margin_top = 22.0
+margin_right = 12.0
+margin_bottom = 34.0
+
+[node name="Panel2" type="Panel" parent="NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -320.0
+margin_top = -29.0
+margin_right = 320.0
+margin_bottom = 24.0
+custom_styles/panel = SubResource( 8 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -317.5
+margin_top = -29.0
+margin_right = 317.5
+margin_bottom = 24.0
+custom_constants/separation = 50
+
+[node name="cancel_button" type="Button" parent="NinePatchRect/HBoxContainer"]
+margin_right = 292.0
+margin_bottom = 53.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+text = "Отмена"
+__meta__ = {
+"_editor_description_": "5"
+}
+
+[node name="apply_button" type="Button" parent="NinePatchRect/HBoxContainer"]
+margin_left = 342.0
+margin_right = 635.0
+margin_bottom = 53.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_fonts/font = SubResource( 7 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 5 )
+text = "Применить"

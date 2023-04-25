@@ -8,9 +8,9 @@ var velocity = Vector2()
 var Bullet = preload("res://Assets/Prefubs/TankBullet1.tscn")
 
 func _input(event):
-	if event.is_action_pressed("click"):
+	if event.is_action_pressed("mouse_right"):
 		target = get_global_mouse_position()
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("mouse_left"):
 		shoot()
 
 func shoot():
@@ -33,4 +33,5 @@ func _physics_process(delta):
 
 
 func _on_detect_body_entered(body):
-	print(body) # Replace with function body.
+	pass
+	#print(body) # Replace with function body.

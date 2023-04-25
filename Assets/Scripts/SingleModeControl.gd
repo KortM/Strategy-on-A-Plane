@@ -28,7 +28,7 @@ func _start():
 	var settle_name = $HBoxContainer/VBoxContainer2/settle_name
 	var info_label = $info_label
 	if settle_name.text:
-		get_tree().change_scene("res://Assets/Scenes/GenerateMap.tscn")
+		get_tree().change_scene("res://Assets/Scenes/Main.tscn")
 		info_label.visible = false
 	else:
 		info_label.text = "Set settlename please"
