@@ -14,7 +14,7 @@ position = Vector2( 960, 544 )
 [node name="Control" parent="Node2D/CameraMove" instance=ExtResource( 3 )]
 anchor_right = 1.0
 margin_left = -960.0
-margin_top = -542.0
+margin_top = -540.0
 margin_right = 960.0
-margin_bottom = 538.0
+margin_bottom = 540.0
 rect_min_size = Vector2( 1024, 600 )

@@ -95,19 +95,20 @@ text = "Настройки"
 [node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/Panel"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 64.0
-margin_top = -288.0
-margin_right = 366.0
-margin_bottom = 288.0
+margin_left = 98.0
+margin_top = -107.0
+margin_right = 400.0
+margin_bottom = 163.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_constants/separation = 29
 alignment = 1
 
 [node name="graphics_button" type="Button" parent="NinePatchRect/Panel/VBoxContainer"]
-margin_top = 179.0
 margin_right = 302.0
-margin_bottom = 232.0
+margin_bottom = 70.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 6 )
@@ -116,9 +117,11 @@ custom_styles/normal = ExtResource( 5 )
 text = "Графика"
 
 [node name="audio_button" type="Button" parent="NinePatchRect/Panel/VBoxContainer"]
-margin_top = 261.0
+margin_top = 99.0
 margin_right = 302.0
-margin_bottom = 314.0
+margin_bottom = 170.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 6 )
@@ -127,9 +130,11 @@ custom_styles/normal = ExtResource( 5 )
 text = "Звук"
 
 [node name="control_button" type="Button" parent="NinePatchRect/Panel/VBoxContainer"]
-margin_top = 343.0
+margin_top = 199.0
 margin_right = 302.0
-margin_bottom = 396.0
+margin_bottom = 270.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 custom_styles/hover = ExtResource( 4 )
 custom_styles/pressed = ExtResource( 6 )
